@@ -149,7 +149,7 @@
   }
   renderProjects();
 
-  /* ---------- CV: real download only if the PDF exists ---------- */
+  /* ---------- CV: direct download ---------- */
   function setCv(ok) {
     var cvBtn = $("cvBtn"), t = cvBtn.querySelector(".btn__t"), link = $("linkCv"), lt = $("linkCvText");
     var req = mailto + "?subject=" + encodeURIComponent("CV request") + "&body=" + encodeURIComponent("Hi Ahmed,\n\nCould you please send me your CV?\n\nThanks");
