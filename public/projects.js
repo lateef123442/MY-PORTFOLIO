@@ -24,11 +24,11 @@ window.PROJECTS = [
     githubUrl: "https://github.com/lateef12347557/snapsolve-ai-5b0b6e3b"
   },
   {
-    title: "F.S.Tutorial CBT",
-    description: "An online assessment platform for practice exams, scheduled mock tests, controlled attempts, and results.",
-    technologies: ["React", "TypeScript", "Supabase"],
+    title: "PhysioNexus",
+    description: "A digital physiotherapy platform designed to make physiotherapy services and resources easier to discover and access.",
+    technologies: ["Web Application"],
     visualIndex: 3,
-    githubUrl: "https://github.com/lateef123442/fstutorial-assessment-hub"
+    liveUrl: "https://physionexus.vercel.app"
   },
   {
     title: "Shear Style Spark",
