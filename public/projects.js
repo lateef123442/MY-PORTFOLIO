@@ -1,11 +1,11 @@
 /* Portfolio projects — verified project links only. */
 window.PROJECTS = [
   {
-    title: "ClassRank",
+    title: "STECH",
     description: "A university study companion that helps students plan their reading, stay consistent, and learn with reminders, quizzes, and practical study guidance.",
     technologies: ["React Native", "Expo", "JavaScript"],
     visualIndex: 0,
-    liveUrl: "https://steth3-classrank-app.vercel.app",
+    liveUrl: "https://steth-app.netlify.app",
     githubUrl: "https://github.com/lateef123442/Steth.3"
   },
   {
