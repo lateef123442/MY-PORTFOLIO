@@ -160,7 +160,8 @@
     });
     $("cvNote").textContent = ok ? "PDF · direct download" : "CV available on request.";
   }
-  // The resume file is committed in public/assets, so both buttons can download it directly.\n  setCv(true);
+  // The resume file is committed in public/assets, so both buttons can download it directly.
+  setCv(true);
 
   /* ---------- Contact ---------- */
   $("contactHeading").textContent = C.contact.heading;
