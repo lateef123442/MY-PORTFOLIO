@@ -65,7 +65,7 @@ window.PROJECTS = [
     description: "A student press and editorial platform for publishing articles, managing writers, and sharing campus media.",
     technologies: ["TanStack Router", "Editorial Tools"],
     visualIndex: 9,
-    liveUrl: "https://ubepsa-editorial-and-press-coral.vercel.app",
+    liveUrl: "https://ubepsa.com",
     githubUrl: "https://github.com/lateef123442/ubepsa-editorial-and-press"
   },
   {
