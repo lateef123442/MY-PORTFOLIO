@@ -61,24 +61,12 @@ window.PROJECTS = [
     caseStudy: { problem: "Solar customers need a clearer way to stay informed about system care and maintenance.", approach: "A support experience centred on maintenance reminders and customer communication.", outcome: "A concept for making ongoing solar support easier to manage." }
   },
   {
-    title: "Univars",
-    description: "A campus-focused social and academic community designed to help university students connect and share updates.",
-    technologies: ["Student Community", "Web Application"],
-    visualIndex: 8
-  },
-  {
     title: "UPEBSA Press",
     description: "A student press and editorial platform for publishing articles, managing writers, and sharing campus media.",
     technologies: ["TanStack Router", "Editorial Tools"],
     visualIndex: 9,
     liveUrl: "https://ubepsa-editorial-and-press-coral.vercel.app",
     githubUrl: "https://github.com/lateef123442/ubepsa-editorial-and-press"
-  },
-  {
-    title: "REBESA",
-    description: "A physiotherapy department website created to present departmental information, resources, and updates.",
-    technologies: ["Website Development"],
-    visualIndex: 10
   },
   {
     title: "Sariki Motors",
