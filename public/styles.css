@@ -186,9 +186,10 @@ button{font:inherit;color:inherit}
 .proj{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center}
 .proj:nth-child(even) .proj__media{order:2}
 .proj__media{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:var(--surface);aspect-ratio:16/10}
-.proj__media img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);clip-path:inset(0 100% 0 0);transition:clip-path 1.2s var(--ease2),transform 1.6s var(--ease)}
+.proj__media img{width:100%;height:100%;object-fit:cover;transform:scale(1);image-rendering:-webkit-optimize-contrast;clip-path:inset(0 100% 0 0);transition:clip-path 1.2s var(--ease2),transform 1.6s var(--ease)}
 .proj.in .proj__media img{clip-path:inset(0);transform:scale(1)}
-.proj:hover .proj__media img{transform:scale(1.04)}
+.proj:hover .proj__media img{transform:scale(1.01)}
+.proj__media--ai{background-repeat:no-repeat;filter:contrast(1.08) saturate(1.1)}
 .proj__media--none{display:grid;place-items:center;font:600 clamp(40px,6vw,80px) var(--display);letter-spacing:-.05em;color:var(--line2)}
 .proj__n{font:500 12px var(--mono);letter-spacing:.14em;color:var(--accent)}
 .proj h3{font:600 clamp(30px,4vw,52px)/1.04 var(--display);letter-spacing:-.04em;margin-top:12px}

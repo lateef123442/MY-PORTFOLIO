@@ -116,7 +116,7 @@
       } else if (Number.isInteger(p.visualIndex) && p.visualIndex >= 0 && p.visualIndex < 16) {
         var vx = Math.round((p.visualIndex % 4) * (100 / 3) * 1000) / 1000;
         var vy = Math.round(Math.floor(p.visualIndex / 4) * (100 / 3) * 1000) / 1000;
-        var bg = "background-image:url('assets/project-visuals.jpg');background-size:400% 400%;background-position:" + vx + "% " + vy + "%";
+        var bg = "background-image:url('assets/project-visuals.svg');background-size:400% 400%;background-position:" + vx + "% " + vy + "%";
         media = '<div class="proj__media proj__media--ai" role="img" aria-label="AI-generated project visual for ' + esc(p.title) + '" style="' + bg + '"></div>';
       } else {
         media = '<div class="proj__media proj__media--none" aria-hidden="true">' + esc(p.title.charAt(0)) + "</div>";
