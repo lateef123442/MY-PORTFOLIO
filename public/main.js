@@ -160,13 +160,7 @@
     });
     $("cvNote").textContent = ok ? "PDF · direct download" : "CV available on request.";
   }
-  setCv(false);
-  if (window.fetch && P.cv && location.protocol !== "file:") {
-    fetch(P.cv, { method: "HEAD", cache: "no-store" }).then(function (r) {
-      var ct = (r.headers.get("content-type") || "").toLowerCase();
-      setCv(r.ok);
-    }).catch(function () { setCv(false); });
-  }
+  // The resume file is committed in public/assets, so both buttons can download it directly.\n  setCv(true);
 
   /* ---------- Contact ---------- */
   $("contactHeading").textContent = C.contact.heading;
