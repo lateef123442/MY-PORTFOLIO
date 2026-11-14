@@ -22,7 +22,7 @@ window.PORTFOLIO = {
     availabilityText: "Available for opportunities",
     email: "lateefahmed3852@gmail.com",
     github: "https://github.com/lateef123442",
-    linkedin: "https://www.linkedin.com/in/lateef-ahmed-9b198434a",
+    linkedin: "https://www.linkedin.com/in/ahmed-abdullateef-9b198434a",
     // The CV is a real PDF. Put it at public/assets/Ahmed-Abdullateef-CV.pdf (this exact name).
     // The site checks the file exists: if it does, the buttons download it; if not, they say
     // "Request CV" and open a pre-filled email. No fake downloads.
