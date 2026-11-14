@@ -1,6 +1,6 @@
 /* ==========================================================================
    CENTRAL CONFIG — edit this file to update the site's content.
-   Projects live in projects.js. The CV is a file at assets/Ahmed-Abdullateef-CV.pdf.
+   Projects live in projects.js. The CV is the Word document at assets/Ahmed-Abdullateef-Resume.doc.
 
    Fields marked  TODO  are intentionally left for you to confirm.
    Empty strings / arrays are hidden on the page.
@@ -23,11 +23,11 @@ window.PORTFOLIO = {
     email: "lateefahmed3852@gmail.com",
     github: "https://github.com/lateef123442",
     linkedin: "https://www.linkedin.com/in/ahmed-abdullateef-9b198434a",
-    // The CV is a real PDF. Put it at public/assets/Ahmed-Abdullateef-CV.pdf (this exact name).
+    // The CV is the existing Word resume copied to public/assets/Ahmed-Abdullateef-Resume.doc.
     // The site checks the file exists: if it does, the buttons download it; if not, they say
     // "Request CV" and open a pre-filled email. No fake downloads.
-    cv: "assets/Ahmed-Abdullateef-CV.pdf",
-    cvFilename: "Ahmed-Abdullateef-CV.pdf",
+    cv: "assets/Ahmed-Abdullateef-Resume.doc",
+    cvFilename: "Ahmed-Abdullateef-Resume.doc",
   },
 
   hero: {
