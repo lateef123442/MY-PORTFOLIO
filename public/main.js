@@ -110,9 +110,17 @@
     host.innerHTML = list.map(function (p, i) {
       var n = (i + 1 < 10 ? "0" : "") + (i + 1);
       var src = safeSrc(p.image);
-      var media = src
-        ? '<div class="proj__media"><img src="' + esc(src) + '" alt="' + esc(p.imageAlt || p.title + " preview") + '" loading="lazy" decoding="async" /></div>'
-        : '<div class="proj__media proj__media--none" aria-hidden="true">' + esc(p.title.charAt(0)) + "</div>";
+      var media;
+      if (src) {
+        media = '<div class="proj__media"><img src="' + esc(src) + '" alt="' + esc(p.imageAlt || p.title + " preview") + '" loading="lazy" decoding="async" /></div>';
+      } else if (Number.isInteger(p.visualIndex) && p.visualIndex >= 0 && p.visualIndex < 16) {
+        var vx = Math.round((p.visualIndex % 4) * (100 / 3) * 1000) / 1000;
+        var vy = Math.round(Math.floor(p.visualIndex / 4) * (100 / 3) * 1000) / 1000;
+        var bg = "background-image:url('assets/project-visuals.jpg');background-size:400% 400%;background-position:" + vx + "% " + vy + "%";
+        media = '<div class="proj__media proj__media--ai" role="img" aria-label="AI-generated project visual for ' + esc(p.title) + '" style="' + bg + '"></div>';
+      } else {
+        media = '<div class="proj__media proj__media--none" aria-hidden="true">' + esc(p.title.charAt(0)) + "</div>";
+      }
       var tech = Array.isArray(p.technologies) && p.technologies.length
         ? '<div class="tags">' + p.technologies.map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") + "</div>" : "";
       var links = "";
@@ -145,7 +153,7 @@
   function setCv(ok) {
     var cvBtn = $("cvBtn"), t = cvBtn.querySelector(".btn__t"), link = $("linkCv"), lt = $("linkCvText");
     var req = mailto + "?subject=" + encodeURIComponent("CV request") + "&body=" + encodeURIComponent("Hi Ahmed,\n\nCould you please send me your CV?\n\nThanks");
-    [[cvBtn, t, "Download my CV", "Request my CV"], [link, lt, "Download CV", "Request CV"]].forEach(function (x) {
+    [[cvBtn, t, "Download CV", "Request my CV"], [link, lt, "Download CV", "Request CV"]].forEach(function (x) {
       var a = x[0], label = x[1];
       if (ok) { a.href = P.cv; a.setAttribute("download", P.cvFilename || "CV.pdf"); label.textContent = x[2]; }
       else { a.href = req; a.removeAttribute("download"); label.textContent = x[3]; }
@@ -156,7 +164,7 @@
   if (window.fetch && P.cv && location.protocol !== "file:") {
     fetch(P.cv, { method: "HEAD", cache: "no-store" }).then(function (r) {
       var ct = (r.headers.get("content-type") || "").toLowerCase();
-      setCv(r.ok && (ct.indexOf("pdf") > -1 || ct.indexOf("octet-stream") > -1));
+      setCv(r.ok);
     }).catch(function () { setCv(false); });
   }
 
