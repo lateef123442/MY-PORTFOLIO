@@ -155,10 +155,10 @@
     var req = mailto + "?subject=" + encodeURIComponent("CV request") + "&body=" + encodeURIComponent("Hi Ahmed,\n\nCould you please send me your CV?\n\nThanks");
     [[cvBtn, t, "Download CV", "Request my CV"], [link, lt, "Download CV", "Request CV"]].forEach(function (x) {
       var a = x[0], label = x[1];
-      if (ok) { a.href = P.cv; a.setAttribute("download", P.cvFilename || "CV.pdf"); label.textContent = x[2]; }
+      if (ok) { a.href = P.cv; a.setAttribute("download", P.cvFilename || "Ahmed-Abdullateef-Resume.doc"); label.textContent = x[2]; }
       else { a.href = req; a.removeAttribute("download"); label.textContent = x[3]; }
     });
-    $("cvNote").textContent = ok ? "PDF · direct download" : "CV available on request.";
+    $("cvNote").textContent = ok ? "Word document · direct download" : "CV available on request.";
   }
   // The resume file is committed in public/assets, so both buttons can download it directly.
   setCv(true);
